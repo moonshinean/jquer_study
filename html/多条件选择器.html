@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="button" value="点击变色" id="btn"/>
+<p>qwe</p>
+<div style="width: 100px;height: 50px; background: pink" >123</div>
+<ul>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+</ul>
+<span>变色</span>
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+  $(function () {
+      $('#btn').click(function () {
+          $('p,div,li,span').css('background','red');
+      })
+  })
+</script>
+</html>

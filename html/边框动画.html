@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+   .box {
+     position: absolute;
+     top: 18vh;
+     right: 26vw;
+     width: 48vw;
+     height: 52vh;
+     background: pink;
+   }
+    .box > .rt, .rb, .lt, .lb {
+     width: 0;
+     height: 2px;
+     /*opacity: 0;*/
+     position: absolute;
+   }
+   .lt {
+     border-top:  2px solid rgba(0, 211, 231, 0.5);
+     border-left: 2px solid rgba(0, 211, 231, 0.5);
+     left: -2px;
+     top: -2px;
+   }
+
+   .rt {
+     border-top: 2px solid rgba(0, 211, 231, 0.5);
+     border-right: 2px solid rgba(0, 211, 231, 0.5);
+     right: -2px;
+     top: -2px;
+   }
+
+   .rb {
+     border-bottom: 2px solid rgba(0, 211, 231, 0.5);
+     border-right: 2px solid rgba(0, 211, 231, 0.5);
+     right: -2px;
+     bottom: -2px;
+   }
+
+   .lb {
+     border-bottom: 2px solid rgba(0, 211, 231, 0.5);
+     border-left: 2px solid rgba(0, 211, 231, 0.5);
+     left: -2px;
+     bottom: -2px;
+   }
+  </style>
+</head>
+<body>
+ <div class="box">
+   <div class="lt"></div>
+   <div class="lb"></div>
+   <div class="rb"></div>
+   <div class="rt"></div>
+ </div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+  $(function () {
+      $('.box').hover(function () {
+          $(this).find('.lt').delay(100).animate({height:'52vh'},1000);
+          $(this).find('.lb').delay(1000).animate({width:'48vw'},1000);
+          $(this).find('.rb').delay(2000).animate({height:'52vh'},1000);
+          $(this).find('.rt').delay(3000).animate({width:'48vw'},1000);
+          // $(this).find('.lt').delay(4000).animate({height:0},1000);
+          // $(this).find('.lt').delay(100).animate({height:'52vh'},1000).css('opacity','1');
+      }, function () {
+      })
+  })
+</script>
+</html>

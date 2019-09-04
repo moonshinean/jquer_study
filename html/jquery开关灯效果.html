@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--<input type="button" value="显示效果" id="btn">-->
+<input type="button" value="关灯" id="btn">
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+    // Jquery对象和DOM对象互相转换
+    /**
+     * DOM对象转Jquery对象
+     */
+/*  // window.onload = function () {
+  //     var  btn = document.getElementById('btn');
+  //     // btn.onclick = function () {
+  //     //     this.style.background = 'red';
+  //     // };
+  //     $(btn).click(function () {
+  //         $(this).css('background','red');
+  //     })
+  // };
+    /!**
+     * Jquery对象转DOM对象
+     * 1.$(btn).get(0) // DOM对象
+     * 1.$(btn).[0] // DOM对象
+     *!/
+     $(() => {
+       // var btnObj =  $('#btn').get(0);
+       // btnObj.onclick = function () {
+       //     this.style.background = 'red';
+       // }
+         $('#btn').click(function () {
+             $(this).css('background','red')
+         });
+       // var btnObj =  $('#btn')[0];
+       // btnObj.onclick = function () {
+       //     this.style.background = 'red';
+       // }
+     })*/
+
+    /**
+     * 实现网页开关灯效果
+     *
+     */
+    // window.onload = function () {
+    //     var btn = document.getElementById('btn');
+    //     btn.onclick = function () {
+    //         if (btn.value === '关灯') {
+    //             document.body.style.backgroundColor = 'black';
+    //             btn.value = '开灯';
+    //         } else {
+    //             document.body.style.backgroundColor = '#fff';
+    //             btn.value = '关灯';
+    //         }
+    //
+    //     }
+    // }
+    $(function () {
+        $('#btn').click(function () {
+            if ($(this).val() === '关灯') {
+                $('body').css('background', 'black');
+                $(this).val('开灯');
+            } else {
+                $(document.body).css('background', '#fff');
+                $(this).val('关灯');
+            }
+        })
+    })
+</script>
+</html>

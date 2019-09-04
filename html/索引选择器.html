@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="button" value="点击变色" id="btn"/>
+<ul>
+  <li>123</li>
+  <li>34</li>
+  <li>213</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+</ul>
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+$(function () {
+    $('#btn').click(function () {
+        // 获取ul中的索引为4的li标签元素
+        // $('ul>li:eq(4)').css('background', 'red');
+
+        // 获取ul中的所有索引大于4的li标签元素
+        // $('ul>li:gt(4)').css('background', 'red');
+
+        // 获取ul中的所有索引小于4的li标签元素
+        $('ul>li:lt(4)').css('background', 'red');
+    })
+})
+</script>
+</html>

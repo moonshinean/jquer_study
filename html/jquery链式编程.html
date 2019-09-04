@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul id="uu">
+  <li>123</li>
+  <li>345</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+  <li>123</li>
+</ul>
+</body>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+  $(function () {
+     $('#uu>li').mouseover(function () {
+         $(this).css('background','red').siblings('li').css('background','');
+     }).click(function () {
+         $(this).css('fontSize','20px').css('color','green').css('fontfamily','微软雅黑').siblings('li').css({"fontSize": "","color":"","fontfamily":""})
+     })
+  })
+</script>
+</html>
